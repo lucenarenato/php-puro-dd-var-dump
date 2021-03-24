@@ -1,1 +1,4 @@
-<?php require __DIR__ . '/vendor/autoload.php'; dd(['foo' => [1,2,3]]);
+<?php
+
+$shell = shell_exec('ls -la');
+print_r($shell);

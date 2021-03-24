@@ -1,12 +1,41 @@
 {
-    "name": "renato/test",
+    "name": "Projeto PHP",
+    "description": "PHP, material de estudo.",
+    "keywords": [
+        "php",
+        "aws"
+    ],
+    "type": "project",
+    "license": "MIT",
     "authors": [
         {
-            "name": "Renato de Oliveira Lucena",
-            "email": "cpdrenato@gmail.com"
+          "name": "Desenvolvimento",
+          "email": "cpdrenato@gmail.com"
         }
-    ],
+      ],
     "require": {
-        "symfony/var-dumper": "^5.2"
+        "php": "^7.2",
+        "guzzlehttp/guzzle": "^6.5",
+        "psr/log": "^1.1",
+        "aws/aws-sdk-php": "^3.171",
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "ext-mysqli": "*",
+        "ext-intl": "*",
+        "illuminate/database": "*",
+        "symfony/var-dumper": "*",
+        "league/flysystem": "1.0.70",
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "vlucas/phpdotenv": "4.2.0",
+        "monolog/monolog": "^1.26"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^3.4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "minimum-stability": "dev",
+    "scripts":{
+        "server":"php -S localhost:8080 public/index.php",
+        "tests":"vendor/bin/phpunit test/"
     }
 }
