@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+<body>
+
+    <script>
+        function Meu_IP(){
+           if(window.XMLHttpRequest) pegar_ip=new window.XMLHttpRequest
+           else pegar_ip=new ActiveXObject('Microsoft.XMLHttp');
+          
+           pegar_ip.open("GET","http://api.hostip.info/get_html.php",false);
+           pegar_ip.send();
+           leandroip = pegar_ip.responseText.split("\n");
+           for (i=0; leandroip.length >= i; i++) { 
+                ip = leandroip[i].split(":"); 
+                if ( ip[0] == "IP" ) return ip[1]; 
+            } 
+             return false; 
+            } 
+            document.write("Seu IP:",Meu_IP(),"\n",".");
+        </script>
+    
+</body>
+</html>

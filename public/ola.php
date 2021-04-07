@@ -15,11 +15,11 @@ use Psr\Log\LoggerInterface;
 
 ini_set("display_errors", "OFF");
 // Session
-if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/atendimento/sessao.php")) {
+/*if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/atendimento/sessao.php")) {
     require_once $_SERVER['DOCUMENT_ROOT'] . "/atendimento/sessao.php";
 } else {
     die("Arquivo de sessão não encontrado.");
-}
+}*/
 
 //$dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '.env');

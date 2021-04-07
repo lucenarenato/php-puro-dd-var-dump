@@ -8,13 +8,7 @@ use Psr\Http\Message\UriInterface;
 use Psr\Log\LoggerInterface;
 use Aws\S3\Exception\S3Exception;
 
-ini_set("display_errors", "OFF");
-// Session
-if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/atendimento/sessao.php")) {
-    require_once $_SERVER['DOCUMENT_ROOT'] . "/atendimento/sessao.php";
-} else {
-    die("Arquivo de sessão não encontrado.");
-}
+
 
 $bucket = 'mys3';
 $keyname = '*** Your Object Key ***';
